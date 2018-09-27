@@ -64,15 +64,14 @@ public class ValidateServlet extends HttpServlet {
 		String id =  req.getParameter("personID");
 		String salary =  req.getParameter("salary");
 		String socialSecurity =  req.getParameter("SocialSecurity");
-		SocialSecurityType sct = null;
+		SocialSecurityType sct = SocialSecurityType.SISBEN;
 		if(socialSecurity.equals("EPS")) {
 			sct = SocialSecurityType.EPS;
 		}else if(socialSecurity.equals("Sisben")) {
 			sct = SocialSecurityType.SISBEN;
-		}
-		/*else {
+		}else if( socialSecurity.equals("Prepagada")){
 			sct = SocialSecurityType.PREPAID;
-		}*/
+		}
 		//long num = Long.parseLong(salary);
 		Employee emp = new Employee(Integer.parseInt(id),Long.parseLong(salary),sct);
 		
