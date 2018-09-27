@@ -64,7 +64,7 @@ public class ValidateServlet extends HttpServlet {
 		String id =  req.getParameter("personID");
 		String salary =  req.getParameter("salary");
 		String socialSecurity =  req.getParameter("SocialSecurity");
-		SocialSecurityType sct;
+		SocialSecurityType sct = null;
 		if(socialSecurity.equals("EPS")) {
 			sct = SocialSecurityType.EPS;
 		}else if(socialSecurity.equals("Sisben")) {
