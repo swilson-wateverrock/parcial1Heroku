@@ -69,9 +69,10 @@ public class ValidateServlet extends HttpServlet {
 			sct = SocialSecurityType.EPS;
 		}else if(socialSecurity.equals("Sisben")) {
 			sct = SocialSecurityType.SISBEN;
-		}else {
-			sct = SocialSecurityType.PREPAID;
 		}
+		/*else {
+			sct = SocialSecurityType.PREPAID;
+		}*/
 		//long num = Long.parseLong(salary);
 		Employee emp = new Employee(Integer.parseInt(id),Long.parseLong(salary),sct);
 		
